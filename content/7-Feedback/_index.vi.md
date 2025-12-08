@@ -1,44 +1,70 @@
 ---
-title: "Chia sẻ, đóng góp ý kiến"
-date: "2025-10-13T14:44:32Z"
+title: "Chia Sẻ và Phản Hồi"
+date: 2025-10-11
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
->Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud Journey, giúp team FCJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
+Phần này ghi lại các hoạt động chia sẻ kiến thức và phản hồi nhận được trong thời gian thực tập.
 
-### Đánh giá chung
+## Chia Sẻ Kiến Thức
 
-**1. Môi trường làm việc**  
-Môi trường làm việc rất thân thiện và cởi mở. Các thành viên trong FCJ luôn sẵn sàng hỗ trợ khi mình gặp khó khăn, kể cả ngoài giờ làm việc. Không gian làm việc gọn gàng, thoải mái, giúp mình tập trung tốt hơn. Tuy nhiên, mình nghĩ có thể bổ sung thêm một số buổi giao lưu hoặc team bonding để mọi người hiểu nhau hơn.
+### Bài Viết Blog Kỹ Thuật
 
-**2. Sự hỗ trợ của mentor / team admin**  
-Mentor hướng dẫn rất chi tiết, giải thích rõ ràng khi mình chưa hiểu và luôn khuyến khích mình đặt câu hỏi. Team admin hỗ trợ các thủ tục, tài liệu và tạo điều kiện để mình làm việc thuận lợi. Mình đánh giá cao việc mentor cho phép mình thử và tự xử lý vấn đề thay vì chỉ đưa đáp án.
+1. "Triển Khai Truy Cập Instance An Toàn với AWS Systems Manager"
 
-**3. Sự phù hợp giữa công việc và chuyên ngành học**  
-Công việc mình được giao phù hợp với kiến thức mình đã học ở trường, đồng thời mở rộng thêm những mảng mới mà mình chưa từng được tiếp cận. Nhờ vậy, mình vừa củng cố kiến thức nền tảng, vừa học thêm kỹ năng thực tế.
+   - Đăng trên Blog AWS
+   - Chủ đề: Bảo mật, Quản lý Instance
+   - Tương tác người đọc: [Thống kê]
 
-**4. Cơ hội học hỏi & phát triển kỹ năng**  
-Trong quá trình thực tập, mình học được nhiều kỹ năng mới như sử dụng công cụ quản lý dự án, kỹ năng làm việc nhóm, và cả cách giao tiếp chuyên nghiệp trong môi trường công ty. Mentor cũng chia sẻ nhiều kinh nghiệm thực tế giúp mình định hướng tốt hơn cho sự nghiệp.
+2. "Thực Hành Tốt Nhất cho AWS Session Manager"
+   - Đăng trên Medium
+   - Chủ đề: AWS, Thực Hành Tốt Nhất về Bảo Mật
+   - Tác động: [Số liệu]
 
-**5. Văn hóa & tinh thần đồng đội**  
-Văn hóa công ty rất tích cực: mọi người tôn trọng lẫn nhau, làm việc nghiêm túc nhưng vẫn vui vẻ. Khi có dự án gấp, mọi người cùng nhau cố gắng, hỗ trợ không phân biệt vị trí. Điều này giúp mình cảm thấy mình là một phần của tập thể, dù chỉ là thực tập sinh.
+### Thuyết Trình Kỹ Thuật
 
-**6. Chính sách / phúc lợi cho thực tập sinh**  
-Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về thời gian linh hoạt khi cần thiết. Ngoài ra, việc được tham gia các buổi đào tạo nội bộ là một điểm cộng lớn.
+1. "Giới Thiệu về AWS Systems Manager"
 
+   - Đối tượng: Người dùng AWS mới
+   - Thời lượng: 45 phút
+   - Chủ đề chính: Khái niệm cơ bản, demo thực hành
 
-### Một số câu hỏi khác
-- Điều bạn **hài lòng nhất** trong thời gian thực tập?  
-- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  
-- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?  
+2. "Tính Năng Nâng Cao của Session Manager"
+   - Đối tượng: Người dùng AWS có kinh nghiệm
+   - Thời lượng: 60 phút
+   - Chủ đề chính: Bảo mật, ghi nhật ký, tự động hóa
 
+## Phản Hồi Nhận Được
 
-### Đề xuất & mong muốn
-- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?  
-- Bạn có muốn tiếp tục chương trình này trong tương lai?
-- Góp ý khác (tự do chia sẻ):
+### Từ Mentor
+
+- Hiểu biết kỹ thuật tốt
+- Kỹ năng viết tài liệu tốt
+- Lĩnh vực cần cải thiện:
+  - Khái niệm kiến trúc nâng cao
+  - Tự tin khi nói trước công chúng
+
+### Từ Thành Viên Nhóm
+
+- Hợp tác hiệu quả
+- Giao tiếp rõ ràng
+- Hữu ích trong chia sẻ kiến thức
+- Gợi ý cải thiện:
+  - Chủ động hơn trong các cuộc họp
+  - Nâng cao lập kế hoạch dự án
+
+## Suy Ngẫm Cá Nhân
+
+- Có được kinh nghiệm thực tế quý giá
+- Cải thiện kỹ năng viết tài liệu kỹ thuật
+- Nâng cao hiểu biết về dịch vụ AWS
+- Phát triển mạng lưới chuyên môn
+
+## Tác Động và Đóng Góp
+
+- Tạo tài liệu hội thảo có thể tái sử dụng
+- Giúp tối ưu hóa quy trình quản lý instance
+- Đóng góp vào tài liệu của nhóm
+- Hỗ trợ thành viên mới trong nhóm

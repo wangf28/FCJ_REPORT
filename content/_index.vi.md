@@ -6,18 +6,18 @@ chapter: false
 ---
 
 # Báo cáo thực tập
+
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Văn A
 
-&emsp; **Số điện thoại:** 0989888999
+&emsp; **Họ và tên:** Trần Khải Hoàng
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Số điện thoại:** 0336035227
 
-&emsp; **Trường:** Đại học Sư phạm Kỹ thuật TP.HCM
+&emsp; **Email:** HoangTKSE182767@fpt.edu.vn
+
+&emsp; **Trường:** Đại học FPT Cơ sở Thành phố Hồ Chí Minh
 
 &emsp; **Ngành:** Công nghệ thông tin
-
-&emsp; **Lớp:** AWS082025
 
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
 
@@ -25,16 +25,14 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 12/08/2025 đến ngày 12/11/2025
 
-![Ảnh đại diện của bạn](/images/avatar.png)
-
-
+![Ảnh đại diện của bạn](/images/avatar2.png)
 
 ### Nội dung báo cáo
 
-1.  [Worklog](1-Worklog/)
-2.  [Proposal](2-Proposal/)
+1.  [Nhật ký công việc](1-Worklog/)
+2.  [Đề xuất](2-Proposal/)
 3.  [Các bài blogs đã dịch](3-BlogsTranslated/)
-4.  [Các events đã tham gia](4-EventParticipated/)
+4.  [Các sự kiện đã tham gia](4-EventParticipated/)
 5.  [Workshop](5-Workshop/)
 6.  [Tự đánh giá](6-Self-evaluation/)
-7.  [Chia sẻ, đóng góp ý kiến](7-Feedback/)
+7.  [Chia sẻ và Phản hồi](7-Feedback/)
