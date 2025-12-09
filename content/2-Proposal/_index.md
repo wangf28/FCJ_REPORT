@@ -1,115 +1,241 @@
 ---
 title: "Proposal"
-date: "2025-10-13T14:44:32Z"
+date: 2025-09-30
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
+## 1. Project Overview
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+### Project Title
 
-### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+#### IoT Security Monitoring & Alert System for Smart Home on AWS Cloud Platform
 
-### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+### Project Description
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+Development of a comprehensive IoT security monitoring and alert system for smart homes, combining hardware sensor integration, advanced security protocols, serverless backend architecture, and real-time dashboard visualization. The system provides end-to-end monitoring capabilities for environmental parameters (temperature, humidity, gas detection, motion) with robust security measures and cloud-based analytics.
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+### Team Information
 
-### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+- **Team Size**: 5 members (3rd-year university students)
+- **Team Composition**:
+  - 2 IC Design Engineers (Hardware/Firmware specialists)
+  - 2 Software Engineers (Backend/Frontend specialists)  
+  - 1 Security Specialist (Cybersecurity & PKI expert)
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+### Project Duration
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+**3 months** (September 2025 - November 2025)
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+### Total Budget
 
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+**$100 USD** allocated across two main components:
 
-### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+- WebApp Development: $10
+- IoT Hardware & Firmware: $40  
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+### Project Scale
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+**Smart Home** - A typical home with 3 sensor nodes covering critical areas.
 
-### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+---
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+## 2. Project Objectives
 
-Total: $0.7/month, $8.40/12 months
+### Primary Goals
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+1. **Develop IoT device ecosystem** for smart home monitoring
+2. **Implement real-time monitoring system** for environmental and security parameters
+3. **Create scalable serverless backend** using AWS managed services
+4. **Build intuitive dashboard interface** for monitoring and device management
 
-### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+### Key Success Metrics
 
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+- **Device Connectivity**: 99.9% uptime for IoT device connections
+- **Real-time Performance**: <100ms latency for critical alerts
+- **User Experience**: Responsive dashboard accessible on web and mobile
+- **Cost Efficiency**: Stay within $100 budget while achieving production-ready prototype
 
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+---
 
-### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+## 3. Technical Architecture
+
+### 3.1 Hardware Layer (IoT Devices)
+
+- **Microcontroller**: ESP32 with integrated WiFi capability
+- **Sensors**: Temperature/humidity (DHT11), Gas detection (MQ series), MKE-S04 IR fire sensor
+- **Communication**: MQTT over TLS 1.3 for secure data transmission
+
+### 3.2 AWS Cloud Services Integration
+
+| Service | Purpose | Estimated Monthly Cost |
+|---------|---------|----------------------|
+| **AWS IoT Core** | Device gateway and messaging | $3-8 (for smart home) |
+| **AWS IoT Rules** | Message routing and filtering | Free |
+| **AWS Lambda** | Serverless business logic | $10.25 |
+| **Amazon DynamoDB** | NoSQL database for sensor data | $0.36 |
+| **Amazon S3** | Data storage and backup | $1-2 |
+| **Amazon SES** | Email notification services | $1-2 |
+| **API Gateway** | RESTful API endpoints | $6.25 |
+| **Amazon Cognito** | User authentication and authorization | $1-2 |
+| **AWS Amplify** | Frontend hosting and CI/CD | $1-2 |
+| **Amazon Route 53** | DNS and domain management | $1-2 |
+
+### 3.3 System Architecture Diagram
+
+![System Architecture](/FCJ_D2F/images/Diagrams.png)
+
+---
+
+## 4. Budget Analysis
+
+### 4.1 WebApp Development ($10)
+
+- **Frontend Framework**: React.js/Vue.js development tools - free
+- **Testing & Deployment**: AWS S3/CloudFront hosting - $10
+- **Development Libraries**: Chart.js, Material-UI, WebSocket libraries - free
+- **Documentation & Training**: Technical writing resources - free
+
+### 4.2 IoT Hardware & Firmware ($40)
+
+- **Development Boards**: 3x ESP32 development kits for smart home - $15
+- **Sensors & Components**: Temperature, humidity, gas, motion sensors - $10
+- **Power Supplies & Enclosures**: Housing and power management - $10
+- **Connectivity Components**: WiFi modules and antenna - $5
+
+---
+
+## 5. Implementation Timeline
+
+### Phase 1: Foundation (Month 1)
+
+#### Week 1-2: Architecture & Planning
+
+- System architecture design and documentation
+- AWS account setup and service configuration
+- Development environment preparation
+- Team training on AWS services and security protocols
+
+#### Week 3-4: Core Development
+
+- Hardware schematic design and component sourcing
+- Basic firmware development for sensor integration
+- Backend API design and initial Lambda functions
+- Database schema design
+
+### Phase 2: Integration (Month 2)
+
+#### Week 5-6: Hardware-Software Integration
+
+- Component assembly
+- Device-to-cloud communication implementation
+- Real-time data pipeline development
+- User authentication setup
+
+#### Week 7-8: Frontend Development
+
+- Dashboard UI/UX design
+- Frontend dashboard development
+- Mobile responsive implementation
+
+### Phase 3: Testing & Deployment (Month 3)
+
+#### Week 9-10: System Integration Testing
+
+- End-to-end system testing and validation
+- Performance optimization and load testing
+- User acceptance testing and feedback incorporation
+- Bug fixes and refinements
+
+#### Week 11-12: Production Preparation
+
+- Documentation completion and technical manual creation
+- Production deployment and monitoring setup
+- Final system validation
+- Project presentation and demonstration preparation
+
+---
+
+## 6. Deliverables
+
+### 6.1 Hardware Deliverables
+
+- ***IoT Sensor Boards**: 3 fully functional prototypes with integrated sensors for smart home*
+- **Hardware Documentation**: Schematics and assembly instructions
+- **Manufacturing Guide**: Production-ready documentation for scale-up
+
+### 6.2 Software Deliverables
+
+- **Backend API**: RESTful services with comprehensive documentation
+- **Frontend Dashboard**: Responsive web application with real-time monitoring
+- **Mobile Interface**: Progressive Web App (PWA) for mobile device access
+- **Database Schema**: Optimized data models for time-series sensor data
+
+---
+
+## 7. Risk Assessment & Mitigation
+
+### 7.1 Technical Risks
+
+| Risk | Impact | Probability | Mitigation Strategy |
+|------|--------|-------------|-------------------|
+| Hardware component delays | High | Medium | Order components early, maintain backup suppliers |
+| AWS service cost overrun | Medium | Low | Implement cost monitoring, use free tier effectively |
+| Security vulnerability discovery | High | Low | Regular security testing, follow AWS best practices |
+| Integration complexity | Medium | Medium | Incremental integration, comprehensive testing |
+
+### 7.2 Project Management Risks
+
+| Risk | Impact | Probability | Mitigation Strategy |
+|------|--------|-------------|-------------------|
+| Team member unavailability | Medium | Low | Cross-training, documentation, backup assignments |
+| Timeline delays | Medium | Medium | Buffer time allocation, milestone tracking |
+| Budget constraints | High | Low | Weekly budget tracking, cost optimization |
+
+---
+
+## 8. Expected Outcomes & Impact
+
+### 8.1 Technical Achievements
+
+- **Functional IoT System**: Production-ready prototype demonstrating all key features
+- **Real-time Performance**: Sub-second response times for critical alerts and notifications
+- **Scalable Architecture**: Cloud-native design ready for expansion
+
+### 8.2 Learning Outcomes
+
+- **Cloud Architecture**: Hands-on experience with AWS services and serverless computing
+- **IoT Development**: Understanding of IoT device integration and firmware development
+- **Full-Stack Development**: Complete software development lifecycle experience
+- **Project Management**: Practical experience in agile development and team collaboration
+
+### 8.3 Future Applications
+
+- **Smart Home Management**: Environmental monitoring for smart homes
+- **Commercial IoT**: Equipment monitoring and predictive maintenance systems
+- **Healthcare Monitoring**: Patient environment and medical device tracking
+- **Environmental Monitoring**: Air quality and climate monitoring networks
+
+---
+
+## 9. Conclusion
+
+This IoT Security Monitoring & Alert System project represents a comprehensive approach to modern IoT development, *combining cutting-edge hardware design,* robust security protocols, and scalable cloud architecture. With a budget of $100 and a timeline of 3 months, our team of 5 dedicated students will deliver a production-ready prototype that demonstrates best practices in IoT security, cloud computing, and full-stack development.
+
+The project not only serves as an excellent learning experience but also creates a foundation for real-world applications in smart homes, industrial monitoring, and environmental protection. By leveraging AWS managed services and focusing on security-first design principles, we aim to create a system that meets both current needs and future scalability requirements.
+
+**Project Contact Information:**
+
+- **Project Manager**: Tran Quang Huy  
+- **Security Lead**: Tran Quang Huy
+- **Email**: <huytqse182122@fpt.edu.vn>
+- **Project Repository**: <https://github.com/saltless-bruh/D2F_FCJ>
+
+---
+
+*This proposal is submitted for consideration and approval. We look forward to the opportunity to demonstrate our technical capabilities and deliver exceptional results within the proposed timeline and budget.*
+
+## Project Documents
+
+{{%attachments title="Related Documents" style="blue" /%}}
